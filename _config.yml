@@ -1,0 +1,65 @@
+# Site Information
+title: "theBlackLodge"
+description: "My personal coding blog."
+author: "tyrtles"
+url: "https://tyrtles.github.io/skills-github-pages/"
+baseurl: "/blog"
+locale: "en-US"
+timezone: "America/Los_Angeles"
+
+# SEO and Metadata
+seo:
+  title: "theBlackLodge"
+  description: "My personal coding blog."
+  keywords: "technology, coding, personal blog"
+  author: "tyrtles"
+
+# Social Media and Contact
+social:
+  github: "https://github.com/tyrtles"
+contact:
+  email: "subperectual@tutamail.com"
+
+# Analytics
+google_analytics: "UA-XXXXXXXX-X"
+
+# Layout and Appearance
+theme: minima
+paginate: 5
+permalink: /:year/:month/:day/:title/
+markdown: kramdown
+
+# Navigation Menu
+menu:
+  - title: "Home"
+    url: "/"
+  - title: "About"
+    url: "/about"
+  - title: "Blog"
+    url: "/blog"
+  - title: "Contact"
+    url: "/contact"
+
+# Kramdown Settings
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+
+# Plugins
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-seo-tag
+
+# File Exclusions and Inclusions
+exclude:
+  - README.md
+include:
+  - _pages
+  - _posts
+
+# Custom Styles
+css: "/assets/css/styles.css"
+
+# Custom JavaScript
+js: "/assets/js/scripts.js"
