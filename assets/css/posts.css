@@ -1,0 +1,65 @@
+@font-face {
+    font-family: 'RuneScapeChat07';
+    src: url('/theBlackLodge/assets/fonts/RuneScape-Chat-07.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'RuneScapeNPCChat';
+    src: url('/theBlackLodge/assets/fonts/RuneScape-NPC-Chat-2.woff2') format('woff2'),
+         url('/theBlackLodge/assets/fonts/RuneScape-NPC-Chat-2.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Post Navigation */
+.post-navigation {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0;
+}
+
+.prev-post, .next-post {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.prev-post:hover, .next-post:hover {
+    text-decoration: underline;
+}
+
+/* Filter Pop-up */
+.filter-posts {
+    position: relative;
+    margin-top: 20px;
+}
+
+#filterButton {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#filterButton:hover {
+    background-color: #0056b3;
+}
+
+.popup {
+    position: absolute;
+    top: 40px;
+    right: 0;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    z-index: 100;
+}
+
+.hidden {
+    display: none;
+}

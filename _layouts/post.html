@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ page.title }} | {{ site.title }}</title>
+    <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/styles.css">
+    <link rel="icon" href="{{ site.baseurl }}/assets/img/favicon.ico">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1><a href="{{ site.baseurl }}/">{{ site.title }}</a></h1>
+            <p>{{ site.description }}</p>
+            <nav>
+                <ul>
+                    {% for item in site.menu %}
+                        <li><a href="{{ site.baseurl }}{{ item.url }}">{{ item.title }}</a></li>
+                    {% endfor %}
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <article>
+            <h1>{{ page.title }}</h1>
+            <p><small>Published on {{ page.date | date: "%B %d, %Y" }}</small></p>
+            {{ content }}
+        </article>
+
+        <nav class="post-navigation">
+            <div class="previous-post">
+                {% if page.previous %}
+                    <a href="{{ site.baseurl }}{{ page.previous.url }}">&larr; Previous: {{ page.previous.title }}</a>
+                {% endif %}
+            </div>
+            <div class="next-post">
+                {% if page.next %}
+                    <a href="{{ site.baseurl }}{{ page.next.url }}">Next: {{ page.next.title }} &rarr;</a>
+                {% endif %}
+            </div>
+        </nav>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; {{ site.time | date: "%Y" }} {{ site.author }}</p>
+        </div>
+    </footer>
+</body>
+</html>

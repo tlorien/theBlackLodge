@@ -1,0 +1,69 @@
+# Site Information
+title: "theBlackLodge"
+author: "alchen"
+locale: "en-US"
+timezone: "America/Los_Angeles"
+url: "https://tlorien.github.io"
+baseurl: "/theBlackLodge"
+description: ""
+
+# SEO and Metadata
+seo:
+  title: "theBlackLodge"
+  description: "My personal coding blog."
+  keywords: "technology, coding, personal blog"
+  author: "alchen"
+
+# Social Media and Contact
+social:
+  github: "https://github.com/tlorien"
+contact:
+  discord: "https://discordapp.com/users/888590804921233420"
+
+# Analytics
+google_analytics: "UA-XXXXXXXX-X"
+
+# Layout and Appearance
+theme: minima
+paginate: 5
+permalink: /blog/:year/:month/:day/:title/
+markdown: kramdown
+
+# Navigation Menu
+menu:
+  - title: "Home"
+    url: "/"
+  - title: "About"
+    url: "/about/"
+  - title: "Blog"
+    url: "/blog/"
+  - title: "Projects"
+    url: "/projects/"
+  - title: "Resources"
+    url: "/resources/"
+  - title: "Contact"
+    url: "/contact/"
+
+# Kramdown Settings
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+
+# Plugins
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-seo-tag
+
+# File Exclusions and Inclusions
+exclude:
+  - README.md
+include:
+  - _pages
+  - _posts
+
+# Custom JavaScript
+js: "/assets/js/scripts.js"
+
+# Custom CSS
+css: "/assets/css/styles.css"

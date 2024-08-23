@@ -1,0 +1,133 @@
+@font-face {
+    font-family: 'RuneScapeChat07';
+    src: url('/theBlackLodge/assets/fonts/RuneScape-Chat-07.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'RuneScapeNPCChat';
+    src: url('/theBlackLodge/assets/fonts/RuneScape-NPC-Chat-2.woff2') format('woff2'),
+         url('/theBlackLodge/assets/fonts/RuneScape-NPC-Chat-2.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Reset Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'RuneScapeChat07', sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
+    padding-top: 60px;
+}
+
+/* Headings */
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'RuneScapeNPCChat', serif;
+    margin-bottom: 15px;
+}
+
+/* Container */
+.container {
+    width: 80%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px 0;
+}
+
+/* Header */
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 2.5em;
+    margin: 0;
+}
+
+header p {
+    font-style: italic;
+    margin-top: 10px;
+}
+
+header nav ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 20px;
+    text-align: center;
+}
+
+header nav ul li {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 5px 10px;
+    transition: background-color 0.3s ease;
+    border-radius: 4px;
+}
+
+header nav ul li a:hover,
+header nav ul li a.active {
+    background-color: #555;
+}
+
+/* Main Content */
+main {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+main .intro h2 {
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+main .intro p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+main .content {
+    line-height: 1.8;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 20px;
+}
+
+footer p {
+    margin: 0;
+    font-size: 0.9em;
+}
+
+footer p a {
+    color: #fff;
+    text-decoration: underline;
+}
+
+footer p a:hover {
+    text-decoration: none;
+}
