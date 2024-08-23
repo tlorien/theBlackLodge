@@ -1,3 +1,10 @@
+header {
+    background: url('/theBlackLodge/assets/img/background.svg') no-repeat center center;
+    background-size: cover;
+    color: #fff;
+    padding: 20px 0;
+}
+
 /* Font Face Definitions */
 @font-face {
     font-family: 'RuneScapeChat07';
