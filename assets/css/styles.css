@@ -32,7 +32,8 @@ header {
 body {
     font-family: 'RuneScapeChat07', sans-serif;
     line-height: 1.6;
-    background-color: #f4f4f4;
+    background: url('/theBlackLodge/assets/img/page-bg.jpg') no-repeat center center fixed;
+    background-size: cover;
     color: #333;
     padding-top: 60px;
 }
