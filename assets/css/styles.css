@@ -1,8 +1,19 @@
 header {
     background: url('/theBlackLodge/assets/img/banner.svg') no-repeat center center;
-    background-size: cover;
+    background-size: contain; /* Adjusted from cover to contain */
     color: #fff;
     padding: 20px 0;
+    height: auto; /* Ensures the header adapts to the content */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+}
+
+header.fixed-height {
+    height: 200px; /* Adjust to your preference */
+    background-size: cover;
 }
 
 /* Font Face Definitions */
@@ -61,6 +72,19 @@ header {
 header h1 {
     margin: 0;
     font-size: 2em;
+    position: relative; /* Ensures text is above the background image */
+    z-index: 2;
+}
+
+header::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5); /* Optional: Adds a dark overlay to the image */
+    z-index: 1;
 }
 
 header p {
