@@ -1,11 +1,9 @@
-/* General Reset */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Font Import */
 @font-face {
     font-family: 'RuneScapeChat07';
     src: url('/theBlackLodge/assets/fonts/RuneScape-Chat-07.ttf') format('truetype');
@@ -23,7 +21,6 @@
     font-display: swap;
 }
 
-/* Body Styling */
 body {
     font-family: 'RuneScapeChat07', sans-serif;
     line-height: 1.6;
@@ -34,7 +31,6 @@ body {
     background-size: cover;
 }
 
-/* Header Styling */
 header {
     background: url('/theBlackLodge/assets/img/banner.png') repeat;
     background-position: center;
@@ -57,7 +53,7 @@ header {
 
 header h1 {
     margin: 0;
-    font-size: 2.5em;
+    font-size: 2em;
     position: relative;
     z-index: 2;
 }
@@ -80,7 +76,6 @@ header p {
     z-index: 2;
 }
 
-/* Navigation Styling */
 header nav {
     display: flex;
     justify-content: center;
@@ -116,27 +111,38 @@ header nav ul li a:hover {
     color: #fff;
 }
 
-/* Headings */
 h1, h2, h3, h4, h5, h6 {
     font-family: 'RuneScapeNPCChat', serif;
     margin-bottom: 15px;
 }
 
-/* Container */
 .container {
     width: 90%;
     max-width: 1200px;
     margin: 0 auto;
-    padding: 20px 0;
 }
 
-/* Main Content - List Index Layout */
 main {
     background-color: #fff;
     padding: 20px;
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     margin-bottom: 20px;
+}
+
+footer {
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    margin: 20px auto 0;
+    background-color: #333;
+    width: 85%;
+    border-radius: 15px;
+}
+
+footer p {
+    margin: 0;
+    font-size: 0.9em;
 }
 
 /* Content List */
