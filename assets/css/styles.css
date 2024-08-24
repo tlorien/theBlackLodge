@@ -1,19 +1,8 @@
-header {
-    background: url('/theBlackLodge/assets/img/banner.svg') no-repeat center center;
-    background-size: contain; /* Adjusted from cover to contain */
-    color: #fff;
-    padding: 20px 0;
-    height: auto; /* Ensures the header adapts to the content */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    overflow: hidden;
-}
-
-header.fixed-height {
-    height: 200px; /* Adjust to your preference */
-    background-size: cover;
+/* Global Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 /* Font Face Definitions */
@@ -32,21 +21,55 @@ header.fixed-height {
     font-style: normal;
 }
 
-/* Global Reset */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
 /* Body Styles */
 body {
     font-family: 'RuneScapeChat07', sans-serif;
     line-height: 1.6;
+    color: #333;
+    margin: 0;
+    padding: 0;
     background: url('/theBlackLodge/assets/img/background.svg') no-repeat center center fixed;
     background-size: cover;
-    color: #333;
-    padding-top: 60px;
+}
+
+/* Header Styles */
+header {
+    background: url('/theBlackLodge/assets/img/banner.svg') repeat;
+    background-position: center;
+    background-size: contain; /* Adjust the size of the SVG pattern */
+    color: #fff;
+    padding: 20px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+    border-radius: 15px;
+    width: 85%;
+    margin: 20px auto;
+    z-index: 1; /* Ensures the header is on top */
+}
+
+header.fixed-height {
+    height: 200px;
+}
+
+/* Navigation Styles within Header */
+header nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    z-index: 2;
+}
+
+/* Header Text Styles */
+header h1,
+header p {
+    margin: 0;
+    font-size: 2em;
+    position: relative;
+    z-index: 2;
 }
 
 /* Headings */
@@ -55,64 +78,7 @@ h1, h2, h3, h4, h5, h6 {
     margin-bottom: 15px;
 }
 
-/* Container */
-.container {
-    width: 80%;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-/* Header Styles */
-header {
-    background-color: #333;
-    color: #fff;
-    padding: 20px 0;
-}
-
-header h1 {
-    margin: 0;
-    font-size: 2em;
-    position: relative; /* Ensures text is above the background image */
-    z-index: 2;
-}
-
-header::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: rgba(0, 0, 0, 0.5); /* Optional: Adds a dark overlay to the image */
-    z-index: 1;
-}
-
-header p {
-    margin: 5px 0 15px 0;
-    font-style: italic;
-}
-
-header nav ul {
-    list-style: none;
-    padding: 0;
-}
-
-header nav ul li {
-    display: inline-block;
-    margin-right: 20px;
-}
-
-header nav ul li a {
-    color: #fff;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-header nav ul li a:hover {
-    text-decoration: underline;
-}
-
-/* Main Content */
+/* Main Content Styles */
 main {
     background-color: #fff;
     padding: 20px;
@@ -123,7 +89,6 @@ main {
 
 /* Footer Styles */
 footer {
-    background-color: #333;
     color: #fff;
     text-align: center;
     padding: 10px 0;
@@ -133,4 +98,11 @@ footer {
 footer p {
     margin: 0;
     font-size: 0.9em;
+}
+
+/* Container Styles */
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
 }
