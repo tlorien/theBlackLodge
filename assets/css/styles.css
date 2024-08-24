@@ -1,16 +1,15 @@
-/* Global Reset */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Font Face Definitions */
 @font-face {
     font-family: 'RuneScapeChat07';
     src: url('/theBlackLodge/assets/fonts/RuneScape-Chat-07.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
+    font-display: swap;
 }
 
 @font-face {
@@ -19,24 +18,23 @@
          url('/theBlackLodge/assets/fonts/RuneScape-NPC-Chat-2.woff') format('woff');
     font-weight: normal;
     font-style: normal;
+    font-display: swap;
 }
 
-/* Body Styles */
 body {
     font-family: 'RuneScapeChat07', sans-serif;
     line-height: 1.6;
     color: #333;
     margin: 0;
     padding: 0;
-    background: url('/theBlackLodge/assets/img/background.svg') no-repeat center center fixed;
+    background: #fff url('/theBlackLodge/assets/img/background.svg') no-repeat center center fixed;
     background-size: cover;
 }
 
-/* Header Styles */
 header {
-    background: url('/theBlackLodge/assets/img/banner.svg') repeat;
+    background: url('/theBlackLodge/assets/img/banner.png') repeat;
     background-position: center;
-    background-size: contain; /* Adjust the size of the SVG pattern */
+    background-size: 150px 100px;
     color: #fff;
     padding: 20px 0;
     display: flex;
@@ -47,38 +45,83 @@ header {
     border-radius: 15px;
     width: 85%;
     margin: 20px auto;
-    z-index: 1; /* Ensures the header is on top */
+    z-index: 1;
+    max-width: 1200px;
+    max-height: 628px;
+    background-color: #333;
 }
 
-header.fixed-height {
-    height: 200px;
-}
-
-/* Navigation Styles within Header */
-header nav ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    position: relative;
-    z-index: 2;
-}
-
-/* Header Text Styles */
-header h1,
-header p {
+header h1 {
     margin: 0;
     font-size: 2em;
     position: relative;
     z-index: 2;
 }
 
-/* Headings */
+header::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+header p {
+    margin: 5px 0 15px 0;
+    font-style: italic;
+    position: relative;
+    z-index: 2;
+}
+
+header nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 2;
+    padding: 10px 0;
+}
+
+header nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 20px;
+}
+
+header nav ul li {
+    display: inline-block;
+}
+
+header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+header nav ul li a:hover {
+    background-color: magenta;
+    color: #fff;
+}
+
 h1, h2, h3, h4, h5, h6 {
     font-family: 'RuneScapeNPCChat', serif;
     margin-bottom: 15px;
 }
 
-/* Main Content Styles */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
 main {
     background-color: #fff;
     padding: 20px;
@@ -87,22 +130,17 @@ main {
     margin-bottom: 20px;
 }
 
-/* Footer Styles */
 footer {
     color: #fff;
     text-align: center;
     padding: 10px 0;
-    margin-top: 20px;
+    margin: 20px auto 0;
+    background-color: #333;
+    width: 85%;
+    border-radius: 15px;
 }
 
 footer p {
     margin: 0;
     font-size: 0.9em;
-}
-
-/* Container Styles */
-.container {
-    width: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
 }
