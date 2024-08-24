@@ -6,8 +6,6 @@ permalink: /projects/
 
 # My GitHub Projects
 
-<p>My GitHub repositories:</p>
-
 <ul>
   {% for project in site.data.projects %}
     <li>
