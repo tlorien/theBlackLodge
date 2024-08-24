@@ -3,19 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfolio of {{ site.author }} - coder, filmmaker, writer, musician. Discover projects, blogs, and works that blend technology, storytelling, and art.">
+    <meta name="keywords" content="coding, programming, software development, filmmaking, video production, screenwriting, writing, blog, art, digital art, portfolio, {{ site.author }}">
+    <meta name="author" content="{{ site.author }}">
     <title>{{ page.title }} | {{ site.title }}</title>
     <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/index.css">
     <link rel="icon" href="{{ site.baseurl }}/assets/images/favicon.ico">
+    <meta property="og:title" content="{{ page.title }} | {{ site.title }}">
+    <meta property="og:description" content="Portfolio of {{ site.author }} - coder, filmmaker, writer, musician. Discover projects, blogs, and works that blend technology, storytelling, and art.">
+    <meta property="og:image" content="{{ site.baseurl }}/assets/images/social-preview.png">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="{{ site.url }}{{ page.url }}">
 </head>
 <body>
     <header>
         <div class="container">
-            <h1><a href="{{ site.baseurl }}/">{{ site.title }}</a></h1>
+            <h1>
+                <a href="{{ site.baseurl }}/" aria-label="Home">{{ site.title }}</a>
+            </h1>
             <p>{{ site.description }}</p>
-            <nav>
+            <nav aria-label="Main Navigation">
                 <ul>
                     {% for item in site.menu %}
-                        <li><a href="{{ site.baseurl }}{{ item.url }}">{{ item.title }}</a></li>
+                        <li><a href="{{ site.baseurl }}{{ item.url }}" aria-label="{{ item.title }}">{{ item.title }}</a></li>
                     {% endfor %}
                 </ul>
             </nav>
@@ -27,15 +37,18 @@
             <h2>{{ page.title }}</h2>
             <p>{{ page.description }}</p>
         </section>
-        <section class="content">
+        
+        <section class="content-list">
             {{ content }}
         </section>
     </main>
 
     <footer>
         <div class="container">
-            <p>&copy; {{ site.time | date: "%Y" }} {{ site.author }}</a></p>
+            <p>&copy; {{ site.time | date: "%Y" }} {{ site.author }}. All rights reserved.</p>
         </div>
     </footer>
+    
+    <script src="{{ site.baseurl }}/assets/js/main.js"></script>
 </body>
 </html>
