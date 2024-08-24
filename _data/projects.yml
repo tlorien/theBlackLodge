@@ -1,0 +1,11 @@
+- name: GitHub Pages Blogger
+  url: https://github.com/tlorien/GitHub-Pages-Blogger
+  description: A Python program to create blog posts on GitHub Pages.
+
+- name: Unlike Everything on Facebook
+  url: https://github.com/tlorien/Unlike-Everything-on-Facebook
+  description: A simple browser script to unlike everything on Facebook.
+  
+- name: Unfollow Everyone on Instagram
+  url: https://github.com/tlorien/Unfollow-Everyone-on-Instagram
+  description: A simple browser script to unfollow everyone on Instagram.
