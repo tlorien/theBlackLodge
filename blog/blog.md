@@ -4,10 +4,10 @@ title: "Blog"
 permalink: /blog/
 ---
 <ul>
-  {% for post in site.posts %}
-    <li>
-      <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
-      <p>{{ post.excerpt }}</p>
-    </li>
-  {% endfor %}
+{% for post in site.posts %}
+  <div>
+    <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
+    <p>{{ post.excerpt }}</p>
+  </div>
+{% endfor %}
 </ul>
