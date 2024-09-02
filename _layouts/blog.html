@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ page.title }} | {{ site.title }}</title>
+    <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/blog.css">
+    <link rel="icon" href="{{ site.baseurl }}/assets/images/favicon.ico">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1><a href="{{ site.baseurl }}/">{{ site.title }}</a></h1>
+            <nav>
+                <ul>
+                    {% for item in site.menu %}
+                        <li><a href="{{ site.baseurl }}{{ item.url }}">{{ item.title }}</a></li>
+                    {% endfor %}
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="search-bar">
+            <input type="text" id="search-input" placeholder="Search blog posts..." onkeyup="filterPosts()">
+        </section>
+      
+        <section class="filters">
+            <div class="categories">
+                <h3>Categories</h3>
+                <ul>
+                    {% for category in site.categories %}
+                        <li><a href="{{ site.baseurl }}/categories/{{ category[0] }}">{{ category[0] }}</a></li>
+                    {% endfor %}
+                </ul>
+            </div>
+            <div class="tags">
+                <h3>Tags</h3>
+                <ul>
+                    {% assign tags = site.tags | sort %}
+                    {% for tag in tags %}
+                        <li><a href="{{ site.baseurl }}/tags/{{ tag[0] }}">{{ tag[0] }}</a></li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </section>
+
+        <!-- Blog Posts -->
+        <section class="blog-posts">
+            <ul id="posts-list">
+                {% for post in site.posts %}
+                    <li class="post-item" data-title="{{ post.title }}">
+                        <div class="post-info">
+                            <h2><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h2>
+                            <p class="post-meta">{{ post.date | date: "%B %d, %Y" }} | {{ post.categories | join: ', ' }}</p>
+                            <p class="post-excerpt">{{ post.excerpt }}</p>
+                        </div>
+                    </li>
+                {% endfor %}
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; {{ site.time | date: "%Y" }} {{ site.author }}</p>
+        </div>
+    </footer>
+
+    <script>
+        function filterPosts() {
+            var input = document.getElementById('search-input');
+            var filter = input.value.toLowerCase();
+            var postsList = document.getElementById('posts-list');
+            var posts = postsList.getElementsByClassName('post-item');
+
+            for (var i = 0; i < posts.length; i++) {
+                var title = posts[i].getAttribute('data-title').toLowerCase();
+                if (title.indexOf(filter) > -1) {
+                    posts[i].style.display = "";
+                } else {
+                    posts[i].style.display = "none";
+                }
+            }
+        }
+    </script>
+</body>
+</html>
