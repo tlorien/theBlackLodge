@@ -1,88 +1,225 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Font Faces */
+@font-face {
+    font-family: 'RuneScapeChat07';
+    src: url('/theBlackLodge/assets/fonts/RuneScape-Chat-07.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'RuneScapeNPCChat';
+    src: url('/theBlackLodge/assets/fonts/RuneScape-NPC-Chat-2.woff2') format('woff2'),
+         url('/theBlackLodge/assets/fonts/RuneScape-NPC-Chat-2.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* Body */
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #f8f9fa;
+    font-family: 'RuneScapeChat07', sans-serif;
+    line-height: 1.8;
     color: #333;
     margin: 0;
     padding: 0;
+    background: #fff url('/theBlackLodge/assets/img/background.svg') no-repeat center center fixed;
+    background-size: cover;
 }
-.container {
-    max-width: 1000px;
-    margin: 0 auto;
-    padding: 20px;
-}
+
+/* Header */
 header {
-    background-color: #343a40;
+    background: url('/theBlackLodge/assets/img/banner.png') repeat;
+    background-position: center;
+    background-size: 150px 100px;
     color: #fff;
-    padding: 15px 0;
+    padding: 20px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+    border-radius: 15px;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    z-index: 1;
 }
-header h1 a {
+
+header nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background-color: #333;
+    padding: 10px 0;
+}
+
+header nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 20px;
+}
+
+header nav ul li {
+    display: inline-block;
+}
+
+header nav ul li a {
     color: #fff;
     text-decoration: none;
+    font-weight: bold;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
 }
-nav ul {
+
+header nav ul li a:hover {
+    background-color: magenta;
+    color: #fff;
+}
+
+/* Container */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column; /* Modified for blog content layout */
+    gap: 20px;
+}
+
+/* Main Content */
+main {
+    flex: 3;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+/* Blog Post Styling */
+.blog-posts ul {
     list-style: none;
     padding: 0;
 }
-nav ul li {
-    display: inline;
-    margin-right: 20px;
+
+.post-item {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
 }
-nav ul li a {
-    color: #fff;
+
+.post-item:hover {
+    transform: translateY(-5px);
+}
+
+.post-item h2 a {
     text-decoration: none;
+    color: #333;
+    font-family: 'RuneScapeNPCChat', serif;
 }
+
+.post-item .post-meta {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 10px;
+    font-family: 'RuneScapeChat07', sans-serif;
+}
+
+.post-item .post-excerpt {
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+/* Search Bar */
 .search-bar {
     margin: 20px 0;
 }
+
 .search-bar input {
     width: 100%;
     padding: 10px;
     font-size: 16px;
     border: 1px solid #ccc;
     border-radius: 4px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
+
+/* Filters */
 .filters {
     display: flex;
     justify-content: space-between;
     margin-bottom: 20px;
+    background-color: #f0f0f0;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
+
 .filters h3 {
+    font-family: 'RuneScapeNPCChat', serif;
     margin-bottom: 10px;
+    color: #222;
 }
+
 .filters ul {
     list-style: none;
     padding: 0;
+    margin: 0;
 }
+
 .filters ul li {
     margin-bottom: 5px;
 }
+
 .filters ul li a {
     text-decoration: none;
     color: #007bff;
+    transition: color 0.3s;
 }
-.blog-posts ul {
-    list-style: none;
-    padding: 0;
+
+.filters ul li a:hover {
+    color: magenta;
 }
-.post-item {
-    background-color: #fff;
-    border: 1px solid #ddd;
-    padding: 15px;
-    margin-bottom: 20px;
-    border-radius: 4px;
-}
-.post-item h2 a {
-    text-decoration: none;
-    color: #333;
-}
-.post-item .post-meta {
-    font-size: 14px;
-    color: #666;
-}
+
+/* Footer */
 footer {
-    background-color: #343a40;
     color: #fff;
     text-align: center;
-    padding: 15px 0;
-    margin-top: 40px;
+    padding: 20px 0;
+    background-color: #333;
+    width: 100%;
+    margin-top: 20px;
+    border-top: 1px solid #444;
+}
+
+footer p {
+    margin: 0;
+    font-size: 0.9em;
+}
+
+/* Utility Classes */
+.text-center {
+    text-align: center;
+}
+
+.mt-20 {
+    margin-top: 20px;
 }
