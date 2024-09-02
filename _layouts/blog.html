@@ -8,7 +8,6 @@
     <link rel="icon" href="{{ site.baseurl }}/assets/images/favicon.ico">
 </head>
 <body>
-    <!-- Header -->
     <header>
         <div class="container">
             <h1><a href="{{ site.baseurl }}/">{{ site.title }}</a></h1>
@@ -22,14 +21,11 @@
         </div>
     </header>
 
-    <!-- Main Content -->
     <main class="container">
-        <!-- Search Bar -->
         <section class="search-bar">
             <input type="text" id="search-input" placeholder="Search blog posts..." onkeyup="filterPosts()">
         </section>
 
-        <!-- Blog Posts -->
         <section class="blog-posts">
             <ul id="posts-list">
                 {% for post in site.posts %}
@@ -45,14 +41,12 @@
         </section>
     </main>
 
-    <!-- Footer -->
     <footer>
         <div class="container">
             <p>&copy; {{ site.time | date: "%Y" }} {{ site.author }}</p>
         </div>
     </footer>
 
-    <!-- JavaScript for Search -->
     <script>
         function filterPosts() {
             var input = document.getElementById('search-input');
