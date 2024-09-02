@@ -7,9 +7,9 @@ permalink: /
 
 # Welcome to theBlackLodge
 
-Welcome! I'm **{{ site.author }}**, a software developer, artist, tinkerer-and-thinkerer, fascinated by the intersections of technology and creativity. Here at theBlackLodge, I dive deep into coding, design, everything in between - and I share it all with you!
+Welcome! I'm **{{ site.author }}** — software developer, artist, tinkerer-and-thinkerer — and I'm fascinated by the intersections of technology and creativity. Here at theBlackLodge, I dive deep into coding, design, everything in between - and I share it all with you!
 
-I don't know how you found this site, but I'm glad to have you.
+I don't know how you found this site, but I'm glad to have you!
 
 ### What You'll Find Here
 
