@@ -5,6 +5,25 @@
     box-sizing: border-box;
 }
 
+/* Centering the image */
+.center-image {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0; /* Optional: Adds some vertical spacing */
+}
+
+.center-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.2s; /* Smooth transition on hover */
+}
+
+.center-image img:hover {
+    transform: scale(1.05); /* Slight zoom on hover to indicate interactivity */
+}
+
 /* Font Faces */
 @font-face {
     font-family: 'RuneScapeChat07';
