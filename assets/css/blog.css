@@ -1,0 +1,88 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f8f9fa;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+}
+header {
+    background-color: #343a40;
+    color: #fff;
+    padding: 15px 0;
+}
+header h1 a {
+    color: #fff;
+    text-decoration: none;
+}
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+.search-bar {
+    margin: 20px 0;
+}
+.search-bar input {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+.filters {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+.filters h3 {
+    margin-bottom: 10px;
+}
+.filters ul {
+    list-style: none;
+    padding: 0;
+}
+.filters ul li {
+    margin-bottom: 5px;
+}
+.filters ul li a {
+    text-decoration: none;
+    color: #007bff;
+}
+.blog-posts ul {
+    list-style: none;
+    padding: 0;
+}
+.post-item {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 4px;
+}
+.post-item h2 a {
+    text-decoration: none;
+    color: #333;
+}
+.post-item .post-meta {
+    font-size: 14px;
+    color: #666;
+}
+footer {
+    background-color: #343a40;
+    color: #fff;
+    text-align: center;
+    padding: 15px 0;
+    margin-top: 40px;
+}
