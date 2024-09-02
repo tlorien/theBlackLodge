@@ -4,6 +4,24 @@
     box-sizing: border-box;
 }
 
+.center-image {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.center-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.center-image img:hover {
+    transform: scale(1.05);
+}
+
 @font-face {
     font-family: 'RuneScapeChat07';
     src: url('/theBlackLodge/assets/fonts/RuneScape-Chat-07.ttf') format('truetype');
